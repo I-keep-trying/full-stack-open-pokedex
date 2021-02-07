@@ -1,18 +1,9 @@
-name: deploy
-
-on:
-  push:
-    branches:
-      - master
+name: hello
+on: [push]
 jobs:
-  build:
-    name: Greeting
-    # This job runs on Linux
+  name: hello-date-ls
     runs-on: ubuntu-latest
     steps:
-      - name: working dir
-        run: |
-          pwd
-          ls -la
-      - name: My first step
-        uses: ./.github/actions/hello
+      - name: print date
+        run: echo "MY_DATE=$(date)" >> $GITHUB_ENV
+        run: echo ${{ env.MY_DATE }}
