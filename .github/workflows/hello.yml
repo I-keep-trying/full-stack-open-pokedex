@@ -1,8 +1,7 @@
-name: hello
+name: hellohello
 on: [push]
 jobs:
-  name: hello-date-ls
+  check-bats-version:
     runs-on: ubuntu-latest
     steps:
-      - name: Date Actions
-        uses: ajilraju/actions-date@v0.1
+      - uses: ajilraju/actions-date@v0.1
