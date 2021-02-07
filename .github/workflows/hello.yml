@@ -9,4 +9,4 @@ jobs:
   directories:
     runs-on: ubuntu-latest
     steps:
-      - run: ls -l
+      - run: echo ls -l
