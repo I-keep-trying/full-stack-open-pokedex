@@ -9,5 +9,4 @@ jobs:
   directories:
     runs-on: ubuntu-latest
     steps:
-      - run: echo "DIR_LIST=$(ls -l)" >> $GITHUB_ENV
-      - run: echo ${{ env.DIR_LIST }}
+      - run: npm ls -l
