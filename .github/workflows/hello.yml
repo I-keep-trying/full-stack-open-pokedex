@@ -1,12 +1,22 @@
-name: hello
-on: [push]
+name: deploy
+
+on:
+  push:
+    branches:
+      - master
 jobs:
-  hello-date:
+  build:
+    name: Greeting
+    # This job runs on Linux
     runs-on: ubuntu-latest
     steps:
-      - run: echo "MY_DATE=$(date)" >> $GITHUB_ENV
-      - run: echo ${{ env.MY_DATE }}
-  directories:
-    runs-on: ubuntu-latest
-    steps:
-      - run: npm ls -l
+      - name: working dir
+        run: |
+          pwd
+          ls -la
+      - uses: actions/checkout@v1
+      - uses: actions/setup-node@v1
+        with:
+          node-version: '10.x'
+      - name: My first step
+        uses: ./.github/actions/hello
