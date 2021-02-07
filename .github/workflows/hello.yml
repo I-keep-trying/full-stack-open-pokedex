@@ -4,9 +4,10 @@ jobs:
   hello-date:
     runs-on: ubuntu-latest
     steps:
-      - run: echo "MY_DATE=$(date +'%Y-%m-%d')" >> $GITHUB_ENV
+      - run: echo "MY_DATE=$(date)" >> $GITHUB_ENV
       - run: echo ${{ env.MY_DATE }}
   directories:
     runs-on: ubuntu-latest
     steps:
-      - run: echo ls -l
+      - run: echo "DIR_LIST=$(ls -l)" >> $GITHUB_ENV
+      - run: echo ${{ env.DIR_LIST }}
