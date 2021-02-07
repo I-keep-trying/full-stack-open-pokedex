@@ -1,21 +1,8 @@
-name: deploy
-
-on:
-  push:
-    branches:
-      - master
+name: hello
+on: [push]
 jobs:
-  build:
-    name: Greeting
-    # This job runs on Linux
+  name: hello-date-ls
     runs-on: ubuntu-latest
     steps:
-      - name: working dir
-        run: |
-          pwd
-          ls -la
-      - uses: actions/setup-node@v1
-        with:
-          node-version: '10.x'
-      - name: My first step
-        uses: ./.github/actions/hello
+      - name: Date Actions
+        uses: ajilraju/actions-date@v0.1
