@@ -1,7 +1,10 @@
 name: hellohello
 on: [push]
 jobs:
-  check-bats-version:
+  print-date:
     runs-on: ubuntu-latest
     steps:
       - uses: ajilraju/actions-date@v0.1
+      - run: |
+          pwd
+          ls -la
