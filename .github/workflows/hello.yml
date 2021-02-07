@@ -6,4 +6,4 @@ jobs:
     steps:
       - name: Timestamp
       - run: echo "MY_DATE=$(date +'%Y-%m-%d')" >> $GITHUB_ENV
-        run: echo ${{ env.MY_DATE }}
+      - run: echo ${{ env.MY_DATE }}
