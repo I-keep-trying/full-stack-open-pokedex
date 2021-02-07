@@ -1,7 +1,8 @@
 name: hello
 on: [push]
 jobs:
-  name: hello-date-ls
+  build:
+    name: hello-date-ls
     runs-on: ubuntu-latest
     steps:
       - name: print date
