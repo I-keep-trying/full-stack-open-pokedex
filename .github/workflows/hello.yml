@@ -8,4 +8,4 @@ jobs:
       - run: echo "MY_DATE=$(date +'%Y-%m-%d')" >> $GITHUB_ENV
       - run: echo ${{ env.MY_DATE }}
       - name: Directory list
-      - run: ls
+      - run: echo ls
