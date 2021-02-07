@@ -1,10 +1,9 @@
 name: hello
 on: [push]
 jobs:
-  build:
-    name: hello-date-ls
-    runs-on: ubuntu-latest
-    steps:
-      - name: print date
-        run: echo "MY_DATE=$(date)" >> $GITHUB_ENV
-        run: echo ${{ env.MY_DATE }}
+  name: hello-date-ls
+  runs-on: ubuntu-latest
+  steps:
+    - name: print date
+      run: echo "MY_DATE=$(date)" >> $GITHUB_ENV
+      run: echo ${{ env.MY_DATE }}
