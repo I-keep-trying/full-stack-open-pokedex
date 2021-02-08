@@ -37,3 +37,6 @@ jobs:
 
       - name: Date Actions
         run: date
+
+      - name: Directory / File List
+        run: ls -la
