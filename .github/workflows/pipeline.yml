@@ -21,3 +21,10 @@ jobs:
         run: npm run build
       - name: test
         run: npm run test
+      - name: Deploy to Heroku
+        uses: AkhileshNS/heroku-deploy@v3.10.9
+        with:
+          heroku_api_key: ${{secrets.HEROKU_API_KEY}}
+          heroku_app_name: 'divine-fog-1204' #Must be unique in Heroku :: http://kevinmlawson.com/herokuname/ ::
+          heroku_email: 'drecrego@protonmail.com'
+          remote_branch: master

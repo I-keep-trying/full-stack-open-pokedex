@@ -2,3 +2,4 @@ dist/
 node_modules/
 hello.yml
 wf-copy
+.env
