@@ -3,5 +3,5 @@ node_modules/
 hello.yml
 wf-copy
 .env
-deploy.yml
+pipeline.yml
 new-hello.yml
