@@ -4,15 +4,25 @@ import { Link } from 'react-router-dom'
 const PokemonList = ({ pokemonList }) => {
   return (
     <div className="list-container">
-      {pokemonList.map(({ id, name }) => (
-        <Link key={id} to={`/pokemon/${name}`} className="list-item" style={{ backgroundImage: `url(${`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${id}.png`})` }}>
-          <div
-            className="list-item-name"
+      <h1>PokemonList </h1>
+      <br />
+
+      {pokemonList.map(({ id, name }) => {
+        const imgUri = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${id}.png`
+
+        return (
+          <Link
+            key={id}
+            to={`/pokemon/${name}`}
+            className="list-item"
+            style={{
+              backgroundImage: `url(${imgUri})`,
+            }}
           >
-            {name}
-          </div>
-        </Link>
-      ))}
+            <div className="list-item-name">{name}</div>
+          </Link>
+        )
+      })}
     </div>
   )
 }
