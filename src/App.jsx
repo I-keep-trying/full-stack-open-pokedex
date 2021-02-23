@@ -25,19 +25,12 @@ const App = () => {
     return <ErrorMessage error={error} />
   }
 
-  const healthCheck = health('/health')
-
   return (
     <Router>
       <Switch>
         <Route exact path="/">
           <PokemonList pokemonList={pokemonList} />
         </Route>
-
-        {/*         <Route path="/health">
-          {healthCheck}
-        </Route>
- */}
         <Route
           path="/pokemon/:name"
           render={(routeParams) => {
